@@ -13,6 +13,8 @@ This library is then used in the c++ part of the app to interface with QML.
 
 Results:
  - [x] works
+ - no additional dependencies required
+ - no java installed on the phone, except for building
  - almost empty shared java lib compiles to 12 MB
  - [x] transfer strings from qt to java
  - [x] java can print to console

@@ -19,12 +19,10 @@ int main(int argc, char *argv[])
     QScopedPointer<QQuickView> view(SailfishApp::createView());
 
     QQmlContext *context = view.data()->rootContext();
-
-    qDebug() << " thread " << thread;
     JGateway javaGateway(thread);
 
     //Init JGateway
-    Shared__init__32d66b024a8aca0e01c06f37c82e74a1ffa4df4b(thread);
+    JGateway__init(thread);
 
     context->setContextProperty("JGateway", &javaGateway);
 

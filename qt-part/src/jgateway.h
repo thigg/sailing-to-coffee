@@ -15,7 +15,7 @@ public:
 
 
 signals:
-
+     void invocationResult(QString newValue);
 public slots:
 
 };

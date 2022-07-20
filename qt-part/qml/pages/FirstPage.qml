@@ -7,6 +7,11 @@ Page {
     // The effective value will be restricted by ApplicationWindow.allowedOrientations
     allowedOrientations: Orientation.All
 
+    Connections {
+        target: JGateway
+        onInvocationResult: textlabel.text = newValue
+    }
+
     // To enable PullDownMenu, place our content in a SilicaFlickable
     SilicaFlickable {
         anchors.fill: parent
@@ -34,6 +39,7 @@ Page {
                 title: qsTr("UI Template")
             }
             Label {
+                id: textlabel
                 x: Theme.horizontalPageMargin
                 text: qsTr("Hello Sailors")
                 color: Theme.secondaryHighlightColor

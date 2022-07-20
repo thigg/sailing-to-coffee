@@ -17,5 +17,7 @@ JGateway::JGateway(graal_isolatethread_t *threadPtr)
 void JGateway::postMessage(const QString &qMethodName, const QString &msg)
 {
     qDebug() << "Called the C++ method with" << msg;
-    Shared__invoke__0efe8de76652db7fd14620b97b81808050326907(thread, qMethodName.toUtf8().data(), msg.toUtf8().data());
+    QString result = QString(JGateway__invoke(thread, qMethodName.toUtf8().data(), msg.toUtf8().data()));
+    qDebug() << "result" << result;
+    emit invocationResult(result);
 }

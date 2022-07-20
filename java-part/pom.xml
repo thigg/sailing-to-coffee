@@ -11,6 +11,7 @@
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
     <build>
@@ -88,11 +89,8 @@
                         </executions>
                         <configuration>
                             <mainClass>Main</mainClass>
-                            <agent>
-                                <enabled>true</enabled>
-                            </agent>
                             <buildArgs>
-                                <buildArg>--no-fallback --shared</buildArg> <!-- -Ob might improve build speed for development -->
+                                <buildArg>--no-fallback --shared -Dfile.encoding=UTF8</buildArg> <!-- -Ob might improve build speed for development -->
                             </buildArgs>
                         </configuration>
                     </plugin>

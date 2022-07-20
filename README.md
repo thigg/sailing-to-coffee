@@ -18,8 +18,7 @@ Results:
  - almost empty shared java lib compiles to 12 MB
  - [x] transfer strings from qt to java
  - [x] java can print to console
- - [ ] transfer strings from java to qt
- - [ ] UTF8 works
+ - [x] transfer strings from java to qt
  - [ ] do some fancy json bindings in java for object serialization
  - [ ] thigg learned to handle c++
  - [ ] trick people into contributing to this project

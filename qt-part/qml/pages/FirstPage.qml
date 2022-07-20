@@ -41,7 +41,7 @@ Page {
             }
             Button {
                 text: "test jgateway"
-                onClicked: JGateway.postMessage("Greeter", "testMessage")
+                onClicked: JGateway.postMessage("Greeter", "testMessage äöü")
             }
         }
     }

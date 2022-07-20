@@ -17,6 +17,7 @@ Results:
  - [x] transfer strings from qt to java
  - [x] java can print to console
  - [ ] transfer strings from java to qt
+ - [ ] UTF8 works
  - [ ] do some fancy json bindings in java for object serialization
  - [ ] thigg learned to handle c++
  - [ ] trick people into contributing to this project

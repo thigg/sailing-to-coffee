@@ -3,13 +3,20 @@
 This project tries to find a way to make Java available as a language for SailfishOS apps.
 It currently links a graal native image with a QT 5.6 app.
 
-** aarch64 devices only ** 
+_aarch64 devices only_
 
 ## Overview
 This is a normal c++ app with QML pages and a shared library.
 
 The java part compiles (thanks to GraalVM native image) to a shared library and some header files.
 This library is then used in the c++ part of the app to interface with QML.
+
+Performance results:
+  - This minimal example has ~12 mb overhead.
+  - No startup time noticable
+
+Open questions:
+  - Is it feasible to use standard libraries like jackson or hibernate?
 
 Results:
  - [x] works
@@ -28,6 +35,14 @@ Drinking coffee makes you cute. Thus follow the order:
  2. build QT part
 
 ### Build java part
+#### Prepare
+ - have an aarch64 device for compilation and running
+ - setup ssh and developer mode on your phone
+ - On your phone, download an aarch64 release of graalvm and [install native image](https://www.graalvm.org/22.1/reference-manual/native-image/)
+ - modify the `java-part/compile.sh` script for your setup with the graal path (needed twice) and your ssh connection name.
+
+#### Build 
+
 The base of the java part is in the `java-part` folder.
 
 GraalVM supports no cross compilation, thus download and unzip GraalVM on your phone and rsync the java part to the phone.
@@ -48,9 +63,6 @@ The base of the QT part is in the `qt-part` folder, import this into SailfishIDE
 
 
 ## Alternatives
-All alternatives that used a QT Wrapper or some other kind of GUI didnt work.
-
-  - not qt 5.6 compatible:
-    - QTJambi
-    - javacpp-presets
-
+ - using javafx via gluon did not work
+ - qtjambi and c++ presets to launch a qt application from within java were not qt5.6 compatible
+    - Not tried, qtjambi 5.6 compatible:  https://github.com/tilialabs/qtjambi5

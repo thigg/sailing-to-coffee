@@ -4,6 +4,9 @@ This project tries to find a way to make Java available as a language for Sailfi
 This is done by compiling a java library to a native shared library and then this library
 is included by the qt app.
 
+While this POC works with java, all graal supported languages should work and all other jvm languages as well.
+Thus e.g. scala, kotlin, groovy as jvm languages and js, python, ruby directly by graal.
+
 _aarch64 devices only_
 
 ## Overview

@@ -1,7 +1,8 @@
 # Proof-of-Concept for backing Sailfish QT apps with Java
 
 This project tries to find a way to make Java available as a language for SailfishOS apps.
-It currently links a graal native image with a QT 5.6 app.
+This is done by compiling a java library to a native shared library and then this library
+is included by the qt app.
 
 _aarch64 devices only_
 

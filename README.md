@@ -33,6 +33,9 @@ Results:
  - [ ] do some fancy json bindings in java for object serialization
  - [ ] thigg learned to handle c++
  - [ ] trick people into contributing to this project
+ 
+ For furhter developments see: https://github.com/thigg/sailing-to-coffee
+ 
 ## Building
 Drinking coffee makes you cute. Thus follow the order:
  1. build java part
